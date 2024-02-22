@@ -1,0 +1,25 @@
+.socials {
+  display: flex;
+  gap: 25px;
+  justify-content: center;
+
+  @include media(up, $tablet) {
+    gap: 40px;
+  }
+
+  li {
+    flex-basis: 36px;
+
+    @include media(up, $tablet) {
+      flex-basis: 40px;
+    }
+  }
+
+  a {
+    display: flex;
+  }
+
+  img {
+    @include image-size(contain);
+  }
+}

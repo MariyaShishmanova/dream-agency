@@ -1,0 +1,70 @@
+/**
+ *
+ * Colors
+ *
+ */
+
+$color-white: #ffffff;
+$color-black: #000;
+$color-tundora: #464646;
+$color-code-grey: #1d1d1d;
+$color-dodger-blue: #377dff;
+$color-thunder: #383638;
+
+/**
+   *
+   * Font size
+   *
+   */
+
+$h1-font-size: 64px;
+$h1-font-size-mobile: 28px;
+$h2-font-size: 55px;
+$h2-font-size-mobile: 24px;
+$footer-menu-font-size: 22px;
+$text-font-size: 20px;
+$text-font-size-mobile: 14px;
+$text-font-size-small: 18px;
+$button-font-size: 16px;
+$button-font-size-mobile: 12px;
+
+/**
+   *
+   * Transitions
+   *
+   */
+
+$trs: 0.3s;
+$trs1: 0.5s;
+$transition-timing-function: cubic-bezier(0.68, -0.55, 0.27, 1.55);
+$transition-timing-function1: cubic-bezier(0, 0.57, 0.55, 1);
+
+/**
+   *
+   * Shadows
+   *
+   */
+$shadow: 0 10px 20px rgba($color-black, 0.08);
+$shadow-1: 0 2px 10px rgba($color-black, 0.08);
+
+/**
+   *
+   * Border-radius
+   *
+   */
+$border-radius: 12px;
+$border-radius-1: 50px;
+$border-radius-2: 24px;
+$border-radius-3: 35px;
+
+/**
+   *
+   * Break-points
+   *
+   */
+
+$desktop: 1200px;
+$tablet: 960px;
+$tablet-small: 660px;
+$mobile: 540px;
+$mobile-small: 420px;

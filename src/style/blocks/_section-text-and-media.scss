@@ -1,0 +1,153 @@
+.section-text-and-media {
+  padding-block: 30px;
+
+  @include media(up, $tablet) {
+    padding-block: 98px;
+  }
+
+  &__head {
+    text-align: center;
+    margin-block-end: 37px;
+
+    @include media(up, $tablet) {
+      margin-block-end: 28px;
+    }
+  }
+
+  &__subtitle {
+    @include media(down, $tablet) {
+      margin-block-end: 7px;
+    }
+  }
+
+  &__body {
+    @include media(up, $tablet) {
+      align-items: center;
+      display: grid;
+      grid-template-columns: 45.5645% 49.1935%;
+      gap: 66px;
+    }
+  }
+
+  &__text {
+    order: 2;
+  }
+
+  &__entry {
+    margin-block-end: 35px;
+
+    @include media(up, $tablet) {
+      margin-block-end: 24px;
+    }
+
+    p + p {
+      margin-block-start: 13px;
+
+      @include media(up, $tablet) {
+        margin-block-start: 24px;
+      }
+    }
+  }
+
+  &__actions {
+    @include media(down, $tablet) {
+      margin-block-end: 70px;
+      text-align: center;
+    }
+  }
+
+  &__media {
+    position: relative;
+    order: 1;
+
+    @include media(up, $tablet-small) {
+      @include center-block(530px);
+    }
+
+    &:before {
+      content: url(/purple-dots.svg);
+      position: absolute;
+      left: 0;
+      top: -18px;
+      z-index: -1;
+    }
+
+    @include media(up, $tablet) {
+      max-width: 100%;
+
+      &:before {
+        right: -41px;
+        bottom: -9px;
+        left: auto;
+        top: auto;
+      }
+
+      &:after {
+        content: url(/orange-dots.svg);
+        position: absolute;
+        top: -17px;
+        left: -27px;
+        z-index: -1;
+      }
+    }
+
+    img {
+      @include image-size;
+      border-radius: $border-radius;
+
+      @include media(up, $tablet) {
+        border-radius: $border-radius-2;
+      }
+    }
+  }
+
+  .btn + .btn {
+    margin-inline-start: 28px;
+  }
+
+  .btn-video {
+    color: $color-dodger-blue;
+    padding: 0;
+    position: relative;
+    overflow: hidden;
+    vertical-align: middle;
+
+    &:hover {
+      .btn-video-link--visible {
+        opacity: 0;
+        transform: translateY(-150%) translateZ(0.001px) skewY(-10deg);
+      }
+
+      .btn-video-link--unvisible {
+        opacity: 1;
+        transform: translateY(0) translateZ(0.001px) skewY(0);
+      }
+    }
+
+    &-link {
+      transition: transform $trs1 $transition-timing-function,
+        opacity $trs1 $transition-timing-function;
+      display: inline-block;
+      position: relative;
+      overflow: hidden;
+
+      &--visible {
+        display: block;
+      }
+
+      &--unvisible {
+        display: block;
+        position: absolute;
+        top: 0;
+        left: 0;
+        opacity: 0;
+        transform: translateY(150%) translateZ(0.001px) skewY(10deg);
+      }
+    }
+
+    img {
+      vertical-align: middle;
+      margin-top: -1px;
+    }
+  }
+}

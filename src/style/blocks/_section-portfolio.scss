@@ -1,0 +1,95 @@
+.section-portfolio {
+  padding-block: 40px;
+  text-align: center;
+
+  &__subtitle {
+    margin-block-end: 5px;
+
+    @include media(up, $tablet) {
+      margin-block-end: 15px;
+    }
+  }
+
+  &__head {
+    margin-block-end: 37px;
+
+    @include media(up, $tablet) {
+      margin-block-end: 26px;
+    }
+  }
+
+  &__entry {
+    margin-block-end: 30px;
+
+    @include media(up, $tablet-small) {
+      @include center-block(674px);
+      margin-block-end: 47px;
+    }
+  }
+
+  &__boxes {
+    display: grid;
+    justify-content: center;
+    grid-template-columns: minmax(auto, 300px);
+    grid-auto-rows: 300px;
+    gap: 50px;
+    margin-block-end: 48px;
+    position: relative;
+
+    @include media(up, $tablet) {
+      grid-template-columns: repeat(3, 1fr);
+
+      &:after {
+        content: url('/purple-dots.svg');
+        position: absolute;
+        right: -20px;
+        top: -135px;
+        transform: rotate(-17deg);
+        width: 120px;
+        height: 109px;
+      }
+    }
+
+    @include media(up, $desktop) {
+      grid-auto-rows: 350px;
+    }
+  }
+
+  &__box {
+    &-title {
+      position: absolute;
+      bottom: 30px;
+      left: 30px;
+      color: $color-white;
+      font-weight: 700;
+      z-index: 2;
+    }
+
+    a {
+      @include width-height(100%);
+      display: block;
+      position: relative;
+      clip-path: inset(-1px);
+      will-change: clip-path;
+      transition: clip-path 2s $transition-timing-function1;
+
+      &:hover {
+        clip-path: inset(10px);
+      }
+
+      &::after {
+        @include width-height(100%);
+        top: 0;
+        left: 0;
+        position: absolute;
+        background-color: rgba($color-black, 0.2);
+        z-index: 1;
+        content: '';
+      }
+    }
+
+    img {
+      @include image-size;
+    }
+  }
+}

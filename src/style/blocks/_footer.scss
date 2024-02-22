@@ -1,0 +1,115 @@
+.footer {
+  padding-block: 45px 70px;
+  background-color: $color-thunder;
+  color: $color-white;
+  overflow: hidden;
+
+  @include media(up, $tablet) {
+    padding-block: 128px 30px;
+  }
+
+  &__body {
+    display: flex;
+    gap: 54px;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    margin-block-end: 70px;
+
+    @include media(up, $tablet) {
+      gap: 40px;
+    }
+  }
+
+  &__logo {
+    flex-basis: 130px;
+
+    @include media(up, $tablet) {
+      flex-basis: 187px;
+    }
+  }
+
+  &__nav-cols {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 68px;
+  }
+
+  &-nav-title, &__location-title {
+    font-size: $text-font-size-small;
+
+    @include media(up, $tablet) {
+      font-size: $footer-menu-font-size;
+    }
+  }
+
+  &__menu {
+    font-size: $button-font-size;
+    margin-block-start: 21px;
+
+    @include media(up, $tablet) {
+      font-size: $text-font-size-small;
+    }
+
+    li + li {
+      margin-block-start: 16px;
+    }
+
+    a {
+      position: relative;
+
+      &:after {
+        content: '';
+        width: 0;
+        height: 1px;
+        background-color: $color-white;
+        position: absolute;
+        left: 0;
+        bottom: 0;
+        transition: width $trs ease;
+      }
+
+      &:hover:after {
+        width: 100%;
+      }
+    }
+  }
+
+  &__location {
+    flex-basis: 284px;
+
+    &-title {
+      margin-block-end: 18px;
+    }
+  }
+
+  &__foot {
+    text-align: center;
+  }
+
+  &__socials {
+    display: inline-block;
+    padding-block-end: 20px;
+    position: relative;
+    margin-block-end: 20px;
+
+    &:after {
+      content: '';
+      height: 2px;
+      background-color: rgba($color-white, 0.2);
+      width: calc(100% + 100px);
+      position: absolute;
+      bottom: 0;
+      left: 50%;
+      transform: translateX(-50%);
+    }
+  }
+
+  .copyright {
+    font-size: $text-font-size-mobile;
+
+    @include media (up, $tablet) {
+      font-size: $text-font-size-small;
+    }
+  }
+}

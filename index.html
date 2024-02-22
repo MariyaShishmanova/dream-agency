@@ -1,13 +1,582 @@
 <!doctype html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Vite App</title>
-  </head>
-  <body>
-    <div id="app"></div>
-    <script type="module" src="/main.js"></script>
-  </body>
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Nunito+Sans:opsz,wght@6..12,400;6..12,500;6..12,600;6..12,700;6..12,800&family=Nunito:wght@300;400;500;600;700;800&family=Quicksand:wght@400;600;700&display=swap');
+    @import "splitting/dist/splitting.css";
+    @import "splitting/dist/splitting-cells.css";
+  </style>
+  <title>Creative Agency</title>
+</head>
+
+<body>
+  <div id="app"></div>
+  <header class="header">
+    <div class="container">
+      <div class="header__inner">
+        <div class="header__logo logo">
+          <a href="#">
+            <img src="./header-logo.svg" alt="">
+          </a>
+        </div>
+
+        <div class="header__menu">
+          <nav class="header__nav nav">
+            <ul class="header__menu-container">
+              <li>
+                <a href="#">Home</a>
+              </li>
+
+              <li>
+                <a href="#">About</a>
+              </li>
+
+              <li>
+                <a href="#">Services</a>
+              </li>
+
+              <li>
+                <a href="#">Projects</a>
+              </li>
+            </ul>
+          </nav>
+        </div>
+
+        <div class="header__actions">
+          <a href="#" class="btn btn-transparent">Contact us</a>
+        </div>
+
+        <button class="btn-nav">
+          <span></span>
+        </button>
+      </div>
+    </div>
+  </header>
+  <div class="page-content">
+    <section class="section section-hero">
+      <div class="container">
+        <div class="section-hero__inner">
+          <div class="section-hero__text">
+            <h1 class="section__title section-hero__title animate-on-scroll" data-splitting>
+              Make your dream
+              business goal come true
+            </h1>
+
+            <div class="section-hero__entry">
+              <p>when you need us for improve your business,
+                then come with us to help your business have reach it, you just sit and feel that goal</p>
+            </div>
+
+            <div class="section-hero__actions">
+              <a href="#" class="btn btn-purple">Start Project</a>
+            </div>
+          </div>
+
+          <div class="section-hero__media">
+            <img src="./hero-img.png" alt="">
+            <span class="section-hero__media-tab-1 rellax" data-rellax-speed="1">
+              <img src="./hero-label1.svg" alt="">
+            </span>
+
+            <span class="section-hero__media-tab-2 rellax" data-rellax-speed="1">
+              <img src="./hero-label2.svg" alt="">
+            </span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section section-text-and-media">
+      <div class="container">
+        <div class="section-text-and-media__inner">
+          <div class="section-text-and-media__head">
+            <h3 class="section__subtitle section-text-and-media__subtitle">About Us</h3>
+
+            <h2 class="section__title section-text-and-media__title animate-on-scroll" data-splitting>
+              Our Teammate
+            </h2>
+          </div>
+
+          <div class="section-text-and-media__body">
+            <div class="section-text-and-media__text" data-scroll>
+              <div class="section-text-and-media__entry">
+                <p>We move with make a Creative Strategy for help your business goal, we help to improve your income by
+                  a
+                  services we have. make your content look interesting and make people look for your business2</p>
+                <p>We move with make a Creative Strategy for help your business goal, we help to improve your income by
+                  a services we have. make your content look interesting and make people look for your business</p>
+              </div>
+
+              <div class="section-text-and-media__actions">
+                <a href="#" class="btn btn-purple">About Us</a>
+                <a href="#" class="btn btn-video">
+                  <span class="btn-video-link btn-video-link--visible">
+                    <img src="./play-circle.svg" alt="">
+                    Our story</span>
+                  <span class="btn-video-link btn-video-link--unvisible">
+                    <img src="./play-circle.svg" alt="">
+                    Our story</span>
+                </a>
+              </div>
+            </div>
+
+            <div class="section-text-and-media__media" data-scroll>
+              <img src="./media2.png" alt="teammates-image">
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section section-services">
+      <div class="container">
+        <div class="section-services__inner" data-scroll>
+          <div class="section-services__text">
+            <div class="section-services__head">
+              <h3 class="section__subtitle section-services__subtitle">
+                Our Services
+              </h3>
+
+              <h2 class="section__title section-services__title animate-on-scroll" data-splitting>
+                Perfect and Fast Movement
+              </h2>
+            </div>
+
+            <div class="section-services__entry">
+              <p>We move with make a Creative Strategy for help your business goal, we help to improve your income by a
+                services we have. make your content look interesting and make people look for your business</p>
+            </div>
+
+            <div class="section-services__actions">
+              <a href="#" class="btn btn-arrow">Read more</a>
+            </div>
+          </div>
+
+          <div class="section-services__boxes">
+            <div class="section-services__box">
+              <div class="section-services__box-inner">
+                <div class="section-services__box-media">
+                  <img src="./service-img1.svg" alt="">
+                </div>
+
+                <h3 class="section-services__box-title">
+                  Social Media Management
+                </h3>
+              </div>
+            </div>
+
+            <div class="section-services__box">
+              <div class="section-services__box-inner">
+                <div class="section-services__box-media">
+                  <img src="./service-img2.svg" alt="">
+                </div>
+
+                <h3 class="section-services__box-title">
+                  Search Engine Opimization
+                </h3>
+              </div>
+            </div>
+
+            <div class="section-services__box">
+              <div class="section-services__box-inner">
+                <div class="section-services__box-media">
+                  <img src="./service-img3.svg" alt="">
+                </div>
+
+                <h3 class="section-services__box-title">
+                  Design
+                </h3>
+              </div>
+            </div>
+
+            <div class="section-services__box">
+              <div class="section-services__box-inner">
+                <div class="section-services__box-media">
+                  <img src="./service-img4.svg" alt="">
+                </div>
+
+                <h3 class="section-services__box-title">
+                  Ads
+                </h3>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section section-portfolio">
+      <div class="container">
+        <div class="section-portfolio__inner" data-scroll>
+          <div class="section-portfolio__head">
+            <h3 class="section__subtitle section-portfolio__subtitle">
+              Our Portfolio
+            </h3>
+
+            <h2 class="section__title section-portfolio__title animate-on-scroll" data-splitting>
+              What do we do
+            </h2>
+          </div>
+
+          <div class="section-portfolio__entry">
+            <p>all projects that we have already done , proven can help to use more comfortable, then can used by client
+              from our business</p>
+          </div>
+
+          <div class="section-portfolio__boxes">
+            <div class="section-portfolio__box">
+              <a href="#">
+                <img src="./portfolio1.jpg" alt="">
+
+                <div class="section-portfolio__box-title">
+                  <p>Design Furniture App</p>
+                </div>
+              </a>
+            </div>
+
+            <div class="section-portfolio__box">
+              <a href="#">
+                <img src="./portfolio2.jpg" alt="">
+
+                <div class="section-portfolio__box-title">
+                  <p>Design Byte App</p>
+                </div>
+              </a>
+            </div>
+
+            <div class="section-portfolio__box">
+              <a href="#">
+                <img src="./portfolio3.jpg" alt="">
+
+                <div class="section-portfolio__box-title">
+                  <p>Cloud App</p>
+                </div>
+              </a>
+            </div>
+          </div>
+
+          <div class="section-portfolio__actions">
+            <a href="#" class="btn btn-transparent">See All Portfolio</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section section-testimonial">
+      <div class="container">
+        <div class="section-testimonial__inner">
+          <div class="section-testimonial__head">
+            <h3 class="section__subtitle section-testimonial__subtitle">
+              Testimonial
+            </h3>
+
+            <h2 class="section__title section-testimonial__title animate-on-scroll" data-splitting>
+              People Talk about us
+            </h2>
+          </div>
+
+          <div class="section-testimonial__body swiper">
+            <ul class="section-testimonial__boxes swiper-wrapper" data-equalize-height
+              data-equalize-head=".section-testimonial__box-head" data-equalize-body=".section-testimonial__box-body">
+              <li class="section-testimonial__box swiper-slide">
+                <div class="section-testimonial__box-inner">
+                  <div class="section-testimonial__box-head">
+                    <div class="section-testimonial__box-media">
+                      <img src="./testimonial1.png" alt="">
+                    </div>
+
+                    <div class="section-testimonial__box-person">
+                      <h4 class="section-testimonial__box-name">
+                        Tom Rose
+                      </h4>
+
+                      <div class="section-testimonial__box-position">
+                        Creative Manager
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="section-testimonial__box-body">
+                    <p>There are many variations passages</p>
+                  </div>
+                </div>
+              </li>
+
+              <li class="section-testimonial__box swiper-slide">
+                <div class="section-testimonial__box-inner">
+                  <div class="section-testimonial__box-head">
+                    <div class="section-testimonial__box-media">
+                      <img src="./testimonial2.png" alt="">
+                    </div>
+
+                    <div class="section-testimonial__box-person">
+                      <h4 class="section-testimonial__box-name">
+                        Peter Smith
+                      </h4>
+
+                      <div class="section-testimonial__box-position">
+                        Creative Designer
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="section-testimonial__box-body">
+                    <p>There are many variations passages of Lorem Ipsum majority some by words which don't look.</p>
+                  </div>
+                </div>
+              </li>
+
+              <li class="section-testimonial__box swiper-slide">
+                <div class="section-testimonial__box-inner">
+                  <div class="section-testimonial__box-head">
+                    <div class="section-testimonial__box-media">
+                      <img src="./testimonial3.png" alt="">
+                    </div>
+
+                    <div class="section-testimonial__box-person">
+                      <h4 class="section-testimonial__box-name">
+                        Steve Rose
+                      </h4>
+
+                      <div class="section-testimonial__box-position">
+                        Web Developer
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="section-testimonial__box-body">
+                    <p>There are many variations passages of Lorem Ipsum majority some by words. </p>
+                  </div>
+                </div>
+              </li>
+
+              <li class="section-testimonial__box swiper-slide">
+                <div class="section-testimonial__box-inner">
+                  <div class="section-testimonial__box-head">
+                    <div class="section-testimonial__box-media">
+                      <img src="./testimonial4.png" alt="">
+                    </div>
+
+                    <div class="section-testimonial__box-person">
+                      <h4 class="section-testimonial__box-name">
+                        Chris Stevens
+                      </h4>
+
+                      <div class="section-testimonial__box-position">
+                        Creative Manager
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="section-testimonial__box-body">
+                    <p>There are many variations passages of Lorem</p>
+                  </div>
+                </div>
+              </li>
+
+              <li class="section-testimonial__box swiper-slide">
+                <div class="section-testimonial__box-inner">
+                  <div class="section-testimonial__box-head">
+                    <div class="section-testimonial__box-media">
+                      <img src="./testimonial5.png" alt="">
+                    </div>
+
+                    <div class="section-testimonial__box-person">
+                      <h4 class="section-testimonial__box-name">
+                        Sonya Peters
+                      </h4>
+
+                      <div class="section-testimonial__box-position">
+                        Creative Designer
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="section-testimonial__box-body">
+                    <p>There are many variations passages of Lorem Ipsum majority some by words which don't look . </p>
+                  </div>
+                </div>
+              </li>
+
+              <li class="section-testimonial__box swiper-slide">
+                <div class="section-testimonial__box-inner">
+                  <div class="section-testimonial__box-head">
+                    <div class="section-testimonial__box-media">
+                      <img src="./testimonial1.png" alt="">
+                    </div>
+
+                    <div class="section-testimonial__box-person">
+                      <h4 class="section-testimonial__box-name">
+                        Peter Smith
+                      </h4>
+
+                      <div class="section-testimonial__box-position">
+                        Web Developer
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="section-testimonial__box-body">
+                    <p>There are many variations passages of Lorem Ipsum majority some by words which don't look . </p>
+                  </div>
+                </div>
+              </li>
+            </ul>
+          </div>
+          <div class="swiper-pagination"></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section section-cta">
+      <div class="container">
+        <div class="section-cta__inner" data-scroll>
+          <div class="section-cta__images">
+            <div class="section-cta__image section-cta__image--1" data-value="30">
+              <img src="./cta-img.png">
+            </div>
+
+            <div class="section-cta__image section-cta__image--2" data-value="60">
+              <img src="./cta-img2.png">
+            </div>
+          </div>
+
+          <div class="section-cta__text">
+            <h2 class="section__title section-cta__title animate-on-scroll" data-splitting>
+              Interesting Collaboration With Us?
+            </h2>
+
+            <div class="section-cta__entry">
+              <p>Help you to reach your business goal</p>
+            </div>
+
+            <div class="section-cta__actions">
+              <a href="#" class="btn btn-purple">Get Started</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <footer class="footer">
+      <div class="container">
+        <div class="footer__inner">
+          <div class="footer__body">
+            <div class="logo footer__logo">
+              <a href="#">
+                <img src="./logo.svg" alt="">
+              </a>
+            </div>
+
+            <div class="footer__menu-container">
+              <nav class="nav footer__nav">
+                <ul class="footer__nav-cols">
+                  <li class="footer__nav-col">
+                    <h3 class="footer__nav-title">Terms & policies</h3>
+
+                    <ul class="footer__menu">
+                      <li>
+                        <a href="#">Terms of Service</a>
+                      </li>
+
+                      <li>
+                        <a href="#">Privacy Policy</a>
+                      </li>
+                    </ul>
+                  </li>
+
+                  <li class="footer__nav-col">
+                    <h3 class="footer__nav-title">Company</h3>
+
+                    <ul class="footer__menu">
+                      <li>
+                        <a href="#">Home</a>
+                      </li>
+
+                      <li>
+                        <a href="#">About Us</a>
+                      </li>
+
+                      <li>
+                        <a href="#">Contact Us</a>
+                      </li>
+                    </ul>
+                  </li>
+
+                  <li class="footer__nav-col">
+                    <h3 class="footer__nav-title">Contact</h3>
+
+                    <ul class="footer__menu">
+                      <li>
+                        <a href="#">(+62) 893912392190</a>
+                      </li>
+
+                      <li>
+                        <a href="#">agecnycr@gmail.com</a>
+                      </li>
+                    </ul>
+                  </li>
+                </ul>
+              </nav>
+            </div>
+
+            <div class="footer__location">
+              <h3 class="footer__location-title">Location</h3>
+              <p>PT Osiris Real Estate Internasional Jl. KH. Wahid Hasyim Kel No.10D Jakarta, Indonesia
+                team@OsirisRealEstate.com</p>
+            </div>
+          </div>
+
+          <div class="footer__foot">
+            <div class="footer__socials">
+              <ul class="socials">
+                <li>
+                  <a href="#">
+                    <img src="./fb.svg" alt="">
+                  </a>
+                </li>
+
+                <li>
+                  <a href="#">
+                    <img src="./instagram.svg" alt="">
+                  </a>
+                </li>
+
+                <li>
+                  <a href="#">
+                    <img src="./linkedin.svg" alt="">
+                  </a>
+                </li>
+
+                <li>
+                  <a href="#">
+                    <img src="./gmail.svg" alt="">
+                  </a>
+                </li>
+
+                <li>
+                  <a href="#">
+                    <img src="./twitter.svg" alt="">
+                  </a>
+                </li>
+              </ul>
+            </div>
+
+            <div class="footer__bar">
+              <p class="copyright">Copyright &copy; 2022 Agency Creative. All Right Reserved</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </footer>
+  </div>
+  <script type="module" src="/main.js"></script>
+  <script src="https://unpkg.com/scroll-out/dist/scroll-out.min.js"></script>
+  <script src="https://unpkg.com/@studio-freight/lenis@1.0.35/dist/lenis.min.js"></script> 
+  <script src="https://cdn.jsdelivr.net/gh/dixonandmoe/rellax@master/rellax.min.js"></script>
+</body>
+
 </html>
