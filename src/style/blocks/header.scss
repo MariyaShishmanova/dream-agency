@@ -1,0 +1,89 @@
+.header {
+  background-color: $color-white;
+  box-shadow: $shadow;
+  padding-block: 20px;
+  position: fixed;
+  left: 0;
+  right: 0;
+  top: 0;
+  z-index: 20;
+
+  &__inner {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+  }
+
+  &__logo {
+    flex-basis: 100px;
+
+    @include media(up, $tablet) {
+      flex-basis: 136px;
+    }
+  }
+
+  &__menu {
+    font-weight: 700;
+    font-size: $text-font-size-small;
+    color: rgba($color-tundora, 0.7);
+
+    @include media(down, $tablet) {
+      background-color: $color-white;
+      opacity: 0;
+      visibility: hidden;
+      position: fixed;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      top: var(--header-height);
+      width: 100%;
+      max-height: 0;
+      overflow: auto;
+      height: calc(var(--viewport-height) - var(--header-height));
+      transition-property: visibility, opacity, max-height;
+      transition-duration: $trs;
+      transition-timing-function: ease-in-out;
+      padding-inline: 40px;
+      padding-block-start: 20px;
+
+      @include media(down, $mobile) {
+        padding-inline: 26px;
+      }
+    }
+  }
+
+  &__menu-container {
+    @include media(up, $tablet) {
+      gap: 47px;
+      display: flex;
+      justify-content: space-between;
+    }
+
+    a {
+      transition: color $trs ease;
+
+      &:hover {
+        color: $color-tundora;
+      }
+    }
+
+    li + li {
+      @include media(down, $tablet) {
+        margin-block-start: 25px;
+      }
+    }
+  }
+
+  &.mobile-nav-visible {
+    .header__menu {
+      opacity: 1;
+      visibility: visible;
+      max-height: 1500px;
+    }
+
+    .nav {
+      height: var(--viewport-height);
+    }
+  }
+}

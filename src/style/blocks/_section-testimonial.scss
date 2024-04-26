@@ -1,0 +1,99 @@
+.section-testimonial {
+  padding-block: 20px;
+
+  @include media(up, $tablet) {
+    padding-block: 50px;
+  }
+
+  &__inner {
+    padding-block-end: 50px;
+    position: relative;
+    z-index: 1;
+
+    @include media(up, $tablet) {
+      &::after {
+        content: url('/blue-dots.svg');
+        position: absolute;
+        right: -78px;
+        bottom: -87px;
+        transform: rotate(15deg);
+        width: 120px;
+        height: 109px;
+        z-index: -1;
+      }
+    } 
+  }
+
+  &__head {
+    text-align: center;
+    margin-block-end: 50px;
+    position: relative;
+
+    @include media(up, $tablet) {
+      &:before {
+        content: url('/blue-dots.svg');
+        position: absolute;
+        left: 95px;
+        top: -6px;
+        transform: rotate(15deg);
+        width: 120px;
+        height: 109px;
+        z-index: -1;
+      }
+    }
+  }
+
+  &__subtitle {
+    margin-block-end: 10px;
+
+    @include media(up, $tablet) {
+      margin-block-end: 40px;
+    }
+  }
+
+  &__box {
+    max-width: 360px;
+    padding: 10px;
+
+    &-inner {
+      box-shadow: $shadow-1;
+      border-radius: $border-radius;
+      padding: 30px;
+    }
+
+    &-head {
+      display: flex;
+      margin-block-end: 30px;
+    }
+
+    &-media {
+      flex-basis: 70px;
+      height: 70px;
+      border-radius: 50%;
+      overflow: hidden;
+      margin-inline-end: 30px;
+
+      img {
+        @include image-size;
+      }
+    }
+
+    &-name {
+      color: $color-dodger-blue;
+      font-size: $text-font-size-small;
+
+      @include media(up, $tablet) {
+        font-size: $text-font-size;
+      }
+    }
+
+    &-position {
+      color: rgba($color-tundora, 0.7);
+    }
+  }
+
+  .swiper {
+    width: 100%;
+    height: 100%;
+  }
+}

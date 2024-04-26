@@ -1,0 +1,102 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  @include body-text;
+  background-color: $color-white;
+  color: $color-tundora;
+  font-family: 'Quicksand', sans-serif;
+  overflow-x: hidden;
+  line-height: 1.7142;
+}
+
+h1,
+h2 {
+  font-family: 'Nunito', sans-serif;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+ul {
+  @include unstyled-list;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+button {
+  background-color: transparent;
+  border: 0;
+  cursor: pointer;
+  margin: 0;
+  padding: 0;
+}
+
+.container {
+  @include center-block(1320px);
+  padding-inline: 40px;
+  position: relative;
+
+  @include media(down, $tablet) {
+    max-width: 100%;
+  }
+
+  @include media(down, $mobile) {
+    padding-inline: 26px;
+  }
+}
+
+.section {
+  &__title {
+    @include title-h2;
+  }
+
+  &__title.words {
+    .char {
+      animation: slide-in 0.75s cubic-bezier(0.5, 0, 0.5, 1) both;
+      animation-delay: calc(0.25s + (120ms * var(--char-index)));
+
+      @keyframes slide-in {
+        from {
+          transform: translateX(-3em) translateY(-1.5em) rotate(-135deg)
+            scale(0.5);
+          opacity: 0;
+        }
+      }
+    }
+  }
+
+  &__subtitle {
+    color: $color-dodger-blue;
+    font-size: $text-font-size-mobile;
+
+    @include media(up, $tablet) {
+      font-size: $h2-font-size-mobile;
+    }
+  }
+}
+
+.page-content {
+  margin-block-start: var(--header-height);
+}
+
+[data-scroll] {
+  transition:  transform 3s;
+}
+
+[data-scroll="in"] {
+  transform: translateY(0);
+}
+
+[data-scroll="out"] {
+  opacity: 0;
+  transform: translateY(200px);
+}

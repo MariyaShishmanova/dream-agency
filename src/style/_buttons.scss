@@ -1,0 +1,135 @@
+.btn {
+  appearance: none;
+  border: 0;
+  border-radius: 24px;
+  font-size: $button-font-size-mobile;
+  font-weight: 700;
+  outline: inherit;
+  display: inline-block;
+  text-align: center;
+  user-select: none;
+  text-decoration: none;
+  padding: 8px 35px;
+
+  @include media(up, $tablet) {
+    font-size: $button-font-size;
+    padding: 10px 49px;
+  }
+
+  &-transparent {
+    border: 1px solid $color-dodger-blue;
+    color: $color-dodger-blue;
+    transition-property: color, border-color;
+    transition-duration: $trs;
+    transition-timing-function: ease;
+
+    &:hover {
+      border-color: rgba($color-dodger-blue, 0.8);
+      color: rgba($color-dodger-blue, 0.8);
+    }
+  }
+
+  &-purple {
+    background-color: $color-dodger-blue;
+    color: $color-white;
+    transition: background-color $trs ease;
+
+    &:hover {
+      background-color: rgba($color-dodger-blue, 0.9);
+    }
+  }
+
+  &-arrow {
+    font-size: $text-font-size-mobile;
+    color: $color-dodger-blue;
+    padding: 0 40px 0 0;
+    position: relative;
+    transition: color $trs ease;
+
+    @include media(up, $tablet) {
+      font-size: $text-font-size;
+    }
+
+    &:hover {
+      color: rgba($color-dodger-blue, 0.9);
+    }
+
+    &:hover::after {
+      translate: 5px;
+    }
+
+    &::after {
+      content: url(/arrow-right1.svg);
+      position: absolute;
+      right: 9px;
+      top: 50%;
+      transform: translateY(-50%);
+      margin-block-start: 6px;
+      width: 20px;
+      display: block;
+      transition: translate $trs ease;
+
+      @include media(down, $tablet) {
+        margin-block-start: 3px;
+      }
+    }
+  }
+
+  &-nav {
+    cursor: pointer;
+    position: relative;
+    display: none;
+    width: 25px;
+    height: 20px;
+
+    @include media(down, $tablet) {
+      display: block;
+    }
+
+    &.active {
+      &:after {
+        opacity: 0;
+        visibility: hidden;
+      }
+
+      &:before {
+        top: 6px;
+        transform: rotate(45deg);
+      }
+
+      span {
+        top: 6px;
+        transform: rotate(-45deg);
+      }
+    }
+
+    &:before,
+    &:after,
+    span {
+      content: '';
+      background-color: rgba($color-tundora, 0.7);
+      position: absolute;
+      height: 2px;
+      width: 100%;
+      display: block;
+      left: 0;
+      transition-property: opacity, visibility, transform, top;
+      transition-duration: $trs;
+      transition-timing-function: ease-in-out;
+    }
+
+    &:before {
+      top: 0;
+    }
+
+    &:after {
+      top: 6px;
+      width: 80%;
+      transform: translateX(10%);
+    }
+
+    span {
+      top: 12px;
+    }
+  }
+}

@@ -1,0 +1,182 @@
+.section-hero {
+  padding-block: 50px;
+  text-align: center;
+
+  @include media(up, $tablet) {
+    padding-block: 100px;
+  }
+
+  &__inner {
+    position: relative;
+
+    @include media(up, $desktop) {
+      &:before,
+      &:after {
+        @include width-height(70px);
+        position: absolute;
+        z-index: -1;
+      }
+
+      &:before {
+        content: url(/red-circle.svg);
+        left: 129px;
+        top: 64%;
+      }
+
+      &:after {
+        content: url(/blue-circle.svg);
+        top: 42%;
+        right: 66px;
+      }
+    }
+  }
+
+  &__title {
+    @include title-h1($h1-font-size-mobile, $h1-font-size);
+    margin-block-end: 25px;
+
+    @include media(up, $tablet) {
+      margin-block-end: 25px;
+    }
+  }
+
+  &__entry {
+    font-family: 'Nunito', sans-serif;
+    margin-block-end: 20px;
+
+    @include media(up, $tablet) {
+      margin-block-end: 25px;
+    }
+  }
+
+  &__text {
+    position: relative;
+    margin-block-end: 60px;
+
+    @include media(up, $tablet) {
+      margin-block-end: 98px;
+    }
+
+    &:before,
+    &:after {
+      @include width-height(40px);
+      position: absolute;
+      z-index: -1;
+
+      @include media(up, $desktop) {
+        @include width-height(70px);
+      }
+    }
+
+    &:before {
+      content: url(/blue-circle.svg);
+      bottom: 50px;
+      left: -40px;
+
+      @include media(up, $desktop) {
+        left: -262px;
+      }
+    }
+
+    &::after {
+      content: url(/red-circle.svg);
+      top: -39px;
+      right: -30px;
+
+      @include media(up, $desktop) {
+        right: -370px;
+        top: 80px;
+      }
+    }
+  }
+
+  &__media {
+    @include center-block(330px);
+    border-radius: $border-radius;
+    position: relative;
+
+    @include media(up, $tablet-small) {
+      max-width: 530px;
+      border-radius: $border-radius-1;
+    }
+
+    @include media(up, $tablet) {
+      max-width: 739px;
+    }
+
+    img {
+      border-radius: $border-radius;
+      @include image-size;
+
+      @include media(up, $tablet) {
+        border-radius: $border-radius-1;
+      }
+    }
+
+    &:before,
+    &:after {
+      display: block;
+      width: 98px;
+      height: 71px;
+      position: absolute;
+      z-index: -1;
+    }
+
+    &:before {
+      content: url(/blue-dots.svg);
+      left: -8px;
+      bottom: -6px;
+
+      @include media(up, $tablet) {
+        top: -20px;
+        left: 138px;
+        bottom: auto;
+      }
+    }
+
+    &:after {
+      content: url(/red-dots.svg);
+      right: -17px;
+      top: -13px;
+
+      @include media(up, $tablet) {
+        right: auto;
+        top: auto;
+        bottom: -8px;
+        left: 174px;
+      }
+    }
+
+    &-tab-1 {
+      position: absolute;
+      width: 125px;
+      left: -22px;
+      top: -9px;
+
+      @include media(up, $tablet) {
+        width: 221px;
+        left: -128px;
+        top: 7px;
+      }
+    }
+
+    &-tab-2 {
+      width: 101px;
+      position: absolute;
+      right: -21px;
+      bottom: -15px;
+
+      @include media(up, $tablet) {
+        width: 213px;
+        right: -132px;
+        bottom: -37px;
+      }
+    }
+  }
+
+  &__text {
+    @include media(up, $tablet-small) {
+      @include center-block(749px);
+    }
+  }
+}
